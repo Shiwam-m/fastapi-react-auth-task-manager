@@ -33,13 +33,12 @@ const Dashboard = () => {
         try {
             await taskApi.create({ 
                 ...newTask, 
-                is_completed: false 
-            }); 
+                is_completed: false // Ye zaroor add karein
+            });
             setNewTask({ title: '', description: '' });
             fetchTasks();
         } catch (err) {
-            console.error("Task create nahi hua:", err.response?.data);
-            alert("Task Error: " + JSON.stringify(err.response?.data?.detail));
+            console.error(err.response?.data);
         }
     };
 
