@@ -45,33 +45,33 @@ const Register = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                         <input 
-                            type="text" required
+                            type="text" name="name" id="name" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition"
                             onChange={(e) => setFormData({...formData, name: e.target.value})}
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                        <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">Username</label>
                         <input 
-                            type="text" required
+                            type="text" name="username" id="username" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition"
                             onChange={(e) => setFormData({...formData, username: e.target.value})}
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                         <input 
-                            type="email" required
+                            type="email" name="email" id="email" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition"
                             onChange={(e) => setFormData({...formData, email: e.target.value})}
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                         <input 
-                            type="password" required
+                            type="password" name="password" id="password" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition"
                             onChange={(e) => setFormData({...formData, hash_password: e.target.value})}
                         />

@@ -33,17 +33,17 @@ const Login = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                        <label htmlFor="login-username" className="block text-sm font-medium text-gray-700 mb-1">Username</label>
                         <input 
-                            type="text" required
+                            type="text" name="username" id="login-username" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                             onChange={(e) => setFormData({...formData, username: e.target.value})}
                         />
                     </div>
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                   <div>
+                        <label htmlFor="login-password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                         <input 
-                            type="password" required
+                            type="password" name="password" id="login-password" required
                             className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                             onChange={(e) => setFormData({...formData, password: e.target.value})}
                         />
