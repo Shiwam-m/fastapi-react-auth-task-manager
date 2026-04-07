@@ -30,9 +30,17 @@ const Dashboard = () => {
 
     const handleCreateTask = async (e) => {
         e.preventDefault();
-        await taskApi.create(newTask);
-        setNewTask({ title: '', description: '' });
-        fetchTasks();
+        try {
+            await taskApi.create({ 
+                ...newTask, 
+                is_completed: false 
+            }); 
+            setNewTask({ title: '', description: '' });
+            fetchTasks();
+        } catch (err) {
+            console.error("Task create nahi hua:", err.response?.data);
+            alert("Task Error: " + JSON.stringify(err.response?.data?.detail));
+        }
     };
 
     const toggleComplete = async (task) => {
